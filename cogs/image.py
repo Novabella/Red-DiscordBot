@@ -29,7 +29,8 @@ class Image:
             if len(items) < 1:
                 await self.bot.say("Your search terms gave no results.")
             else:
-                await self.bot.say(items[0].link)
+                rand = randint(0, 59) #60 results per generated page
+                await self.bot.say(items[rand].link)
         elif text[0] != ():
             try:
                 if text[1] == "top":
